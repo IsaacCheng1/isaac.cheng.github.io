@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "adobe-garamond-pro";
+  src:
+    url("https://use.typekit.net/af/1a756d/00000000000000007735d927/31/l?subset_id=2&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/1a756d/00000000000000007735d927/31/d?subset_id=2&fvd=n4&v=3")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "orpheus-pro";
+  src:
+    url("https://use.typekit.net/af/2baa0b/00000000000000007735ebd5/31/l?subset_id=2&fvd=n4&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/2baa0b/00000000000000007735ebd5/31/d?subset_id=2&fvd=n4&v=3")
+      format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "adobe-garamond-pro";
+  src:
+    url("https://use.typekit.net/af/a4e080/00000000000000007735d91e/31/l?subset_id=2&fvd=n7&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/a4e080/00000000000000007735d91e/31/d?subset_id=2&fvd=n7&v=3")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: auto;
+}
+
+:root {
+  --background: #f4f4f3;
+  --text: #000000;
+  --link: #3f3f6d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "adobe-garamond-pro", Garamond, Georgia, serif;
+  font-size: 18.608px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus-visible {
+  color: #20204f;
+}
+
+a:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 3px;
+}
+
+.site-header {
+  width: calc(100% - 102px);
+  min-height: 105px;
+  margin-inline: auto;
+  padding-top: 34px;
+}
+
+.site-title {
+  color: var(--text);
+  font-family: "orpheus-pro", Garamond, Georgia, serif;
+  font-size: 29.36px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.site-title:hover,
+.site-title:focus-visible {
+  color: var(--text);
+}
+
+.page {
+  width: min(1066px, calc(100% - 80px));
+  margin: 32px auto 72px;
+  padding-left: 284px;
+}
+
+.content {
+  width: min(630px, 100%);
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.blog {
+  scroll-margin-top: 30px;
+}
+
+.blog h1 {
+  margin: 42px 0 6px;
+  font-size: 29.36px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1fr);
+  align-items: start;
+}
+
+.post time {
+  padding-top: 1px;
+  font-size: 13.8px;
+  line-height: 1.75;
+  white-space: nowrap;
+}
+
+.post-title {
+  display: inline-block;
+  line-height: 1.3;
+}
+
+.post-content {
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.article-page {
+  margin-top: 96px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 54px;
+}
+
+.article-date {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13.8px;
+  line-height: 1.75;
+}
+
+.article-title {
+  margin: 0 0 28px;
+  font-size: 29.36px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.article-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 18px;
+  }
+
+  .site-header {
+    width: calc(100% - 40px);
+    min-height: auto;
+    padding: 24px 0 30px;
+  }
+
+  .site-title {
+    font-size: 27px;
+  }
+
+  .page {
+    width: calc(100% - 40px);
+    margin-top: 14px;
+    padding-left: 0;
+  }
+
+  .article-page {
+    margin-top: 54px;
+  }
+
+  .content {
+    max-width: 630px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
