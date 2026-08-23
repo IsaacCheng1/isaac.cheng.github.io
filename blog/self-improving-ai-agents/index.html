@@ -41,7 +41,7 @@
           </p>
 
           <p>
-            <strong>Instruction Fine-tuning</strong>:<br />
+            <strong>Instruction Fine-tuning</strong><br />
             A lot of data (with instructions such as translating this into
             French) are curated, e.g. chain of thoughts finetuning, or
             instruction finetuning which includes Q-A pairs.
@@ -54,10 +54,41 @@
           </p>
 
           <p>
-            <strong>Inference Scaling</strong><br />
+            <strong>Inference Scaling (Test Time scaling)</strong><br />
             One way to get more out of the model is inference scaling. One
             example is: ask the model the same question multiple times → use a
             verifier to find a correct answer for the question.
+          </p>
+
+          <p>
+            <strong>Self-improving</strong><br />
+            Test Time Scaling → generate the synthetic data → finetune the LLM
+            → LLM gets better
+          </p>
+
+          <p>
+            <strong>Reasoning Model</strong><br />
+            o-1, deep-seek reasoning … can do
+          </p>
+          <ul>
+            <li>Problem Analysis</li>
+            <li>Task Decomposition</li>
+            <li>
+              Self-evolution: self-correction, try different approaches when
+              current one isn’t working
+            </li>
+          </ul>
+
+          <p>
+            <strong>LLM to Agent</strong><br />
+            An agent is a system. It has a goal, a plan, and an environment
+            which is used to get feedback. The agent uses LLM.
+          </p>
+
+          <p>
+            <strong>LLM to Agentic Workflow</strong><br />
+            Agentic workflow: LLM and tool orchestrates, through predefined
+            code.
           </p>
         </div>
       </article>
