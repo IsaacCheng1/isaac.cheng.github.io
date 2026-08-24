@@ -22,74 +22,135 @@
         <h1 class="article-title">Self-improving AI Agents</h1>
 
         <div class="article-content">
-          <p>
-            <strong>Scaling Law</strong><br />
-            Scaling Law hits saturation point.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Scaling Law</strong></p>
+            <p>Scaling Law hits saturation point.</p>
+          </section>
 
-          <p>
-            <strong>Chain of Thoughts</strong><br />
-            As LLM gets larger, the model shows emergent behavior - chain of
-            thoughts. This is the key aspect of the reasoning/thinking model.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Chain of Thoughts</strong></p>
+            <p>
+              As LLM gets larger, the model shows emergent behavior - chain of
+              thoughts. This is the key aspect of the reasoning/thinking model.
+            </p>
+          </section>
 
-          <p>
-            <strong>Alignment</strong><br />
-            Alignment is the problem of steering AI to align with the goal,
-            values, and preference of humans. One way of alignment is
-            fine-tuning.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Alignment</strong></p>
+            <p>
+              Alignment is the problem of steering AI to align with the goal,
+              values, and preference of humans. One way of alignment is
+              fine-tuning.
+            </p>
+          </section>
 
-          <p>
-            <strong>Instruction Fine-tuning</strong><br />
-            A lot of data (with instructions such as translating this into
-            French) are curated, e.g. chain of thoughts finetuning, or
-            instruction finetuning which includes Q-A pairs.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle">
+              <strong>Instruction Fine-tuning</strong>
+            </p>
+            <p>
+              A lot of data (with instructions such as translating this into
+              French) are curated, e.g. chain of thoughts finetuning, or
+              instruction finetuning which includes Q-A pairs.
+            </p>
+          </section>
 
-          <p>
-            <strong>RLHF</strong><br />
-            Reinforcement Learning from Human Feedback approximates a reward
-            model with human preferences, then uses RL to finetune the LLM.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>RLHF</strong></p>
+            <p>
+              Reinforcement Learning from Human Feedback approximates a reward
+              model with human preferences, then uses RL to finetune the LLM.
+            </p>
+          </section>
 
-          <p>
-            <strong>Inference Scaling (Test Time scaling)</strong><br />
-            One way to get more out of the model is inference scaling. One
-            example is: ask the model the same question multiple times → use a
-            verifier to find a correct answer for the question.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Self-improving</strong></p>
+            <p>
+              Test Time Scaling → generate the synthetic data → finetune the LLM
+              → LLM gets better
+            </p>
+          </section>
 
-          <p>
-            <strong>Self-improving</strong><br />
-            Test Time Scaling → generate the synthetic data → finetune the LLM
-            → LLM gets better
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Reasoning Model</strong></p>
+            <p>o-1, deep-seek reasoning … can do</p>
+            <ul>
+              <li>Problem Analysis</li>
+              <li>Task Decomposition</li>
+              <li>
+                Self-evolution: self-correction, try different approaches when
+                current one isn’t working
+              </li>
+            </ul>
+          </section>
 
-          <p>
-            <strong>Reasoning Model</strong><br />
-            o-1, deep-seek reasoning … can do
-          </p>
-          <ul>
-            <li>Problem Analysis</li>
-            <li>Task Decomposition</li>
-            <li>
-              Self-evolution: self-correction, try different approaches when
-              current one isn’t working
-            </li>
-          </ul>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>LLM to Agent</strong></p>
+            <p>
+              An agent is a system. It has a goal, a plan, and an environment
+              which is used to get feedback. The agent uses LLM.
+            </p>
+          </section>
 
-          <p>
-            <strong>LLM to Agent</strong><br />
-            An agent is a system. It has a goal, a plan, and an environment
-            which is used to get feedback. The agent uses LLM.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle">
+              <strong>LLM to Agentic Workflow</strong>
+            </p>
+            <p>
+              Agentic workflow: LLM and tool orchestrates, through predefined
+              code.
+            </p>
+          </section>
 
-          <p>
-            <strong>LLM to Agentic Workflow</strong><br />
-            Agentic workflow: LLM and tool orchestrates, through predefined
-            code.
-          </p>
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Agentic Workflow</strong></p>
+            <p>
+              It requires
+              <em>planning, multi-step reasoning, and self-improvement</em>.
+            </p>
+            <ul>
+              <li>prompt chain</li>
+              <li>routing</li>
+              <li>parallelization e.g. deep research agent</li>
+              <li>orchestrator e.g. LLM manager doing planning</li>
+              <li>evaluator / judge</li>
+              <li>
+                verifier e.g. verify the output of a coding agent. Verification
+                is a hard problem. It can be one of the bottlenecks of agentic
+                workflow.
+              </li>
+            </ul>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle">
+              <strong>Inference Scaling (Test Time Compute scaling)</strong>
+            </p>
+            <ul>
+              <li>One way to get more out of the model is inference scaling.</li>
+              <li>
+                <em>Repeated Sampling / Parallel Sampling</em>: ask the model
+                the same question multiple times → use a verifier to find a
+                correct answer for the question.
+              </li>
+              <li>
+                <em>Sequential Revision</em>: ask the model to revise its own
+                answers in sequence.
+              </li>
+              <li>
+                <em>Reward Models</em>
+                <ul>
+                  <li><em>Outcome Reward Model to score the answer</em></li>
+                  <li>
+                    <em
+                      >Process Reward Model(PRM) score each step in model’s
+                      response</em
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
         </div>
       </article>
     </main>
