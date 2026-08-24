@@ -175,35 +175,20 @@ strong {
   line-height: 1.2;
 }
 
-.article-content {
-  line-height: 1.55;
+.article-subtitle {
+  margin-bottom: 4px;
+}
+
+.article-subtitle + ul {
+  margin-top: 4px;
 }
 
 .article-section {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
-.article-section:last-child,
-.article-section > :last-child,
-.article-section li:last-child {
+.article-section:last-child {
   margin-bottom: 0;
-}
-
-.article-subtitle {
-  margin-bottom: 10px;
-}
-
-.article-section ul {
-  margin: 10px 0 0;
-  padding-left: 1.35em;
-}
-
-.article-section li {
-  margin-bottom: 6px;
-}
-
-.article-section ul ul {
-  margin-top: 6px;
 }
 
 @media (max-width: 760px) {
