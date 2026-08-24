@@ -10,6 +10,10 @@
     <title>Everything about RL — Isaac Cheng</title>
     <link rel="preconnect" href="https://use.typekit.net" crossorigin />
     <link rel="stylesheet" href="../../css/homepage.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+    ></script>
   </head>
   <body>
     <header class="site-header">
@@ -42,56 +46,64 @@
             </p>
             <p>How to represent experience as data ?</p>
             <ul>
-              <li><var>s<sub>t</sub></var> - state at time t</li>
-              <li><var>o<sub>t</sub></var> - observation at time t</li>
+              <li>\(s_t\) - state at time t</li>
+              <li>\(o_t\) - observation at time t</li>
+              <li>\(a_t\) - action/decision taken at time t</li>
               <li>
-                <var>a<sub>t</sub></var> - action/decision taken at time t
-              </li>
-              <li>
-                <var>π<sub>t</sub></var> - trajectory, a sequence of
-                states/observations and actions
+                \(\pi_t\) - trajectory, a sequence of states/observations and
+                actions
                 <ul>
                   <li>often referred to as rollout or episode</li>
                 </ul>
               </li>
-              <li>
-                <var>r</var>(<var>s</var>, <var>a</var>) - reward of
-                <var>s</var>, <var>a</var>
-              </li>
+              <li>\(r(s,a)\) - reward of \(s,a\)</li>
             </ul>
           </section>
 
           <section class="article-section">
             <p class="article-subtitle"><strong>Markov Property</strong></p>
             <p>
-              The state <var>s<sub>3</sub></var> is independent of its previous
-              state <var>s<sub>1</sub></var>, given state
-              <var>s<sub>2</sub></var>. This helps us to break down the problem
-              in terms of that we do not need to worry about all the
-              dependencies that come before it.
+              The state \(s_3\) is independent of its previous state \(s_1\),
+              given state \(s_2\). This helps us to break down the problem in
+              terms of that we do not need to worry about all the dependencies
+              that come before it.
             </p>
           </section>
 
           <section class="article-section">
             <p class="article-subtitle"><strong>Deep RL</strong></p>
             <p>
-              It uses DL to to learn the policy
-              <var>π<sub>θ</sub></var>(<var>a</var> | <var>s</var>).
+              It uses DL to to learn the policy \(\pi_\theta(a \mid s)\).
             </p>
           </section>
 
           <section class="article-section">
             <p class="article-subtitle"><strong>Goal of RL</strong></p>
+            <ul>
+              <li>
+                Maximize
+                <span
+                  aria-label="expected value over tau sampled from p theta of tau of the sum from t to T of r of s sub t and a sub t"
+                >
+                  \(\displaystyle \mathbb{E}_{\tau \sim p_\theta(\tau)}
+                  \left[\sum_{t}^{T} r(s_t,a_t)\right]\)
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Stochastic Policy</strong></p>
+            <p>Policy is not deterministic, i.e. it is stochastic.</p>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle">
+              <strong>How do you know if a policy is good or bad ?</strong>
+            </p>
             <p>
-              Maximum reward
-              <span
-                role="math"
-                aria-label="maximum of the sum from t to T of r of s sub t and a sub t"
-              >
-                max ∑<sub><var>t</var></sub><sup><var>T</var></sup>
-                <var>r</var>(<var>s<sub>t</sub></var>,
-                <var>a<sub>t</sub></var>)
-              </span>
+              Value function \(V_\pi(s)\): future expected value starting at
+              \(s\) and following \(\pi\)
             </p>
           </section>
         </div>
