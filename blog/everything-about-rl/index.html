@@ -50,12 +50,49 @@
               <li>
                 <var>π<sub>t</sub></var> - trajectory, a sequence of
                 states/observations and actions
+                <ul>
+                  <li>often referred to as rollout or episode</li>
+                </ul>
               </li>
               <li>
                 <var>r</var>(<var>s</var>, <var>a</var>) - reward of
                 <var>s</var>, <var>a</var>
               </li>
             </ul>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Markov Property</strong></p>
+            <p>
+              The state <var>s<sub>3</sub></var> is independent of its previous
+              state <var>s<sub>1</sub></var>, given state
+              <var>s<sub>2</sub></var>. This helps us to break down the problem
+              in terms of that we do not need to worry about all the
+              dependencies that come before it.
+            </p>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Deep RL</strong></p>
+            <p>
+              It uses DL to to learn the policy
+              <var>π<sub>θ</sub></var>(<var>a</var> | <var>s</var>).
+            </p>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Goal of RL</strong></p>
+            <p>
+              Maximum reward
+              <span
+                role="math"
+                aria-label="maximum of the sum from t to T of r of s sub t and a sub t"
+              >
+                max ∑<sub><var>t</var></sub><sup><var>T</var></sup>
+                <var>r</var>(<var>s<sub>t</sub></var>,
+                <var>a<sub>t</sub></var>)
+              </span>
+            </p>
           </section>
         </div>
       </article>
