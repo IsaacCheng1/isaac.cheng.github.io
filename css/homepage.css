@@ -135,6 +135,10 @@ strong {
   align-items: start;
 }
 
+.post + .post {
+  margin-top: 10px;
+}
+
 .post time {
   padding-top: 1px;
   font-size: 13.8px;
