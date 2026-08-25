@@ -106,6 +106,62 @@
               \(s\) and following \(\pi\)
             </p>
           </section>
+
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Imitation Learning</strong></p>
+            <ul>
+              <li>
+                given a trajectory (i.e. demonstration) that is collected by
+                experts.
+                <ul>
+                  <li>
+                    demonstration
+                    \(D = (s_1, a_1, s_2, a_2, \ldots, s_t)\)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                the demonstration is sampled from an unknown expert policy
+                \(\pi_{\text{expert}}\)
+              </li>
+              <li>
+                goal: learn the \(\pi_{\text{expert}}\) by imitation.
+              </li>
+              <li>
+                model selection
+                <ul>
+                  <li>
+                    version 0: train a policy \(\pi_\theta\) to predict action
+                    \(\hat{a}\) given \(s\), minimizing
+                    \(\displaystyle \sum_{(s,a) \in D}
+                    \left\|\hat{a} - a\right\|^2\). This is supervised
+                    learning.
+                    <ul>
+                      <li>\(\hat{a} = \pi(s)\)</li>
+                    </ul>
+                  </li>
+                  <li>
+                    version 1: Mixture of Gaussian (GMM, Gaussian Mixture
+                    Model).
+                    <ul>
+                      <li>
+                        This is a generative model (which learns prob
+                        distribution over data).
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    version 2: an auto-regressive model, a sequence model
+                  </li>
+                </ul>
+              </li>
+              <li>
+                deterministic policy (i.e. output is a certain action) vs.
+                stochastic policy (i.e. output is a distribution of different
+                actions)
+              </li>
+            </ul>
+          </section>
         </div>
       </article>
     </main>
