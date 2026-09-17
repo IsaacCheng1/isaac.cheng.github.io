@@ -27,140 +27,17 @@
 
         <div class="article-content">
           <section class="article-section">
-            <p class="article-subtitle">
-              <strong>Reinforcement Learning</strong>
-            </p>
-            <p>
-              It focuses on sequential decision making problems, by observing,
-              taking action, observing, taking action, …
-            </p>
-            <p>
-              It learns from its own experience. It is more like intelligence.
-            </p>
-            <p>RL is used in generative models and post-training.</p>
+            <p class="article-subtitle"><strong>Objective of RL</strong></p>
+            <p>reward function</p>
           </section>
 
           <section class="article-section">
-            <p class="article-subtitle">
-              <strong>How to model behavior ?</strong>
-            </p>
-            <p>How to represent experience as data ?</p>
-            <ul>
-              <li>\(s_t\) - state at time t</li>
-              <li>\(o_t\) - observation at time t</li>
-              <li>\(a_t\) - action/decision taken at time t</li>
-              <li>
-                \(\pi_t\) - trajectory, a sequence of states/observations and
-                actions
-                <ul>
-                  <li>often referred to as rollout or episode</li>
-                </ul>
-              </li>
-              <li>\(r(s,a)\) - reward of \(s,a\)</li>
-            </ul>
-          </section>
-
-          <section class="article-section">
-            <p class="article-subtitle"><strong>Markov Property</strong></p>
-            <p>
-              The state \(s_3\) is independent of its previous state \(s_1\),
-              given state \(s_2\). This helps us to break down the problem in
-              terms of that we do not need to worry about all the dependencies
-              that come before it.
-            </p>
-          </section>
-
-          <section class="article-section">
-            <p class="article-subtitle"><strong>Deep RL</strong></p>
-            <p>
-              It uses DL to to learn the policy \(\pi_\theta(a \mid s)\).
-            </p>
-          </section>
-
-          <section class="article-section">
-            <p class="article-subtitle"><strong>Goal of RL</strong></p>
-            <ul>
-              <li>
-                Maximize
-                <span
-                  aria-label="expected value over tau sampled from p theta of tau of the sum from t to T of r of s sub t and a sub t"
-                >
-                  \(\displaystyle \mathbb{E}_{\tau \sim p_\theta(\tau)}
-                  \left[\sum_{t}^{T} r(s_t,a_t)\right]\)
-                </span>
-              </li>
-            </ul>
-          </section>
-
-          <section class="article-section">
-            <p class="article-subtitle"><strong>Stochastic Policy</strong></p>
-            <p>Policy is not deterministic, i.e. it is stochastic.</p>
-          </section>
-
-          <section class="article-section">
-            <p class="article-subtitle">
-              <strong>How do you know if a policy is good or bad ?</strong>
-            </p>
-            <p>
-              Value function \(V_\pi(s)\): future expected value starting at
-              \(s\) and following \(\pi\)
-            </p>
-          </section>
-
-          <section class="article-section">
-            <p class="article-subtitle"><strong>Imitation Learning</strong></p>
-            <ul>
-              <li>
-                given a trajectory (i.e. demonstration) that is collected by
-                experts.
-                <ul>
-                  <li>
-                    demonstration
-                    \(D = (s_1, a_1, s_2, a_2, \ldots, s_t)\)
-                  </li>
-                </ul>
-              </li>
-              <li>
-                the demonstration is sampled from an unknown expert policy
-                \(\pi_{\text{expert}}\)
-              </li>
-              <li>
-                goal: learn the \(\pi_{\text{expert}}\) by imitation.
-              </li>
-              <li>
-                model selection
-                <ul>
-                  <li>
-                    version 0: train a policy \(\pi_\theta\) to predict action
-                    \(\hat{a}\) given \(s\), minimizing
-                    \(\displaystyle \sum_{(s,a) \in D}
-                    \left\|\hat{a} - a\right\|^2\). This is supervised
-                    learning.
-                    <ul>
-                      <li>\(\hat{a} = \pi(s)\)</li>
-                    </ul>
-                  </li>
-                  <li>
-                    version 1: Mixture of Gaussian (GMM, Gaussian Mixture
-                    Model).
-                    <ul>
-                      <li>
-                        This is a generative model (which learns prob
-                        distribution over data).
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    version 2: an auto-regressive model, a sequence model
-                  </li>
-                </ul>
-              </li>
-              <li>
-                deterministic policy (i.e. output is a certain action) vs.
-                stochastic policy (i.e. output is a distribution of different
-                actions)
-              </li>
-            </ul>
+            <p class="article-subtitle"><strong>Anatomy of RL</strong></p>
+            <ol>
+              <li>samples, i.e. run the policy</li>
+              <li>fit the model or estimate the reward</li>
+              <li>update the policy</li>
+            </ol>
           </section>
         </div>
       </article>
