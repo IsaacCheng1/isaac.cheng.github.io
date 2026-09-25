@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../../css/homepage.css" />
     <script
       defer
-      src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"
+      src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS_CHTML"
     ></script>
   </head>
   <body>
@@ -32,6 +32,20 @@
           </section>
 
           <section class="article-section">
+            <p class="article-subtitle"><strong>Concepts</strong></p>
+            <ol>
+              <li>state</li>
+              <li>observation</li>
+              <li>action</li>
+              <li>transition</li>
+              <li>reward</li>
+              <li>policy</li>
+              <li>return</li>
+              <li>discounting factor</li>
+            </ol>
+          </section>
+
+          <section class="article-section">
             <p class="article-subtitle"><strong>Anatomy of RL</strong></p>
             <ol>
               <li>samples, i.e. run the policy</li>
@@ -42,11 +56,27 @@
 
           <section class="article-section">
             <p class="article-subtitle"><strong>Policy Gradient</strong></p>
-            <ul>
-              <li>Reinforce algorithm</li>
-              <li>Variance Reduction</li>
-              <li>Reward-to-go based on causality</li>
-            </ul>
+            <ol>
+              <li>Vanilla REINFORCE algorithm</li>
+              <li>Vanilla Actor-critic algorithm</li>
+              <li>Online actor-critic algorithm</li>
+              <li>
+                Miscellaneous
+                <ol>
+                  <li>baseline</li>
+                  <li>Variance Reduction</li>
+                  <li>Reward-to-go (i.e. causality)</li>
+                  <li>Advantage \(A = Q - V\)</li>
+                </ol>
+              </li>
+            </ol>
+          </section>
+
+          <section class="article-section">
+            <p class="article-subtitle"><strong>Value-based RL</strong></p>
+            <ol>
+              <li>DQN</li>
+            </ol>
           </section>
         </div>
       </article>
